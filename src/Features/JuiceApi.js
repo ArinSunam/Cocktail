@@ -14,12 +14,20 @@ export const JuiceApi = createApi({
       })
     }),
 
-    getRandomCocktail: builder.query({
-      query: () => ({
-        url: `/randomselection.php`
-      })
 
+    getCocktailDetail: builder.query({
+      query: (id) => ({
+        url: `/lookup.php?i=${id}`
+      }),
     }),
+
+
+    getCocktails: builder.query({
+      query: () => ({
+        url: `filter.php?c=Cocktail
+        `
+      }),
+    })
 
 
 
@@ -27,4 +35,4 @@ export const JuiceApi = createApi({
   })
 });
 
-export const { useGetOrdinaryDrinksQuery, useGetRandomCocktailQuery } = JuiceApi
+export const { useGetOrdinaryDrinksQuery, useGetCocktailDetailQuery } = JuiceApi

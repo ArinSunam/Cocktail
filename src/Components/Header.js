@@ -4,10 +4,10 @@ import { NavLink } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <div className='bg-cyan-700 text-white flex justify-between items-baseline px-6 py-4'>
+    <div className='bg-cyan-700 text-white flex justify-between items-baseline px-6 py-4 sticky top-0 z-20'>
 
       <div>
-        <NavLink to='/' replace> <h1 className='text-3xl '>MeowJuice</h1> </NavLink>
+        <NavLink to='/' replace> <h1 className='text-3xl '>ArinDrinks</h1> </NavLink>
       </div>
 
       <nav className='space-x-5 text-xl'>
